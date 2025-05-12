@@ -14,7 +14,7 @@ const stripe = Stripe("sk_test_51QPeZEHm1WyUJKoCG2n1bc0Zkds9ZuCM65EPAeXOyTTxVal6
 
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'https://kanat-air-client.vercel.app/'],
+  origin: ['http://localhost:3000', 'https://kanat-air-client.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
