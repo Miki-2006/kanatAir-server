@@ -26,11 +26,11 @@ app.options('*', cors(corsOptions));
 app.get('/', (req, res) => {
   res.send('Hello, Node.js!');
 });
-const PORT = process.env.PORT || 5000;
-const HOST = '0.0.0.0'; // добавь эту строку
+const port = process.env.MySQLport=3306 || 5000;
+const host = '0.0.0.0'; // добавь эту строку
 
-app.listen(PORT, HOST, () => {
-  console.log(`Server running at http://${HOST}:${PORT}/`);
+app.listen(port, host, () => {
+  console.log(`Server running at http://${host}:${port}/`);
 });
 
 
