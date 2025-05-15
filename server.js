@@ -7,7 +7,6 @@ const processOfScan = require('./scanner')
 const getOffersFromAmadeus = require('./amadeus')
 
 const app = express();
-const port = 5000;
 app.use(bodyParser.json({ limit: '10mb' }));
 const stripe = Stripe("sk_test_51QPeZEHm1WyUJKoCG2n1bc0Zkds9ZuCM65EPAeXOyTTxVal6pmBFtCmkHAWIRCXWNVM29K0EBbdzAonIsPLSfoyV00f2Kxma0U")
 
@@ -26,6 +25,12 @@ app.options('*', cors(corsOptions));
 
 app.get('/', (req, res) => {
   res.send('Hello, Node.js!');
+});
+const PORT = process.env.PORT || 5000;
+const HOST = '0.0.0.0'; // добавь эту строку
+
+app.listen(PORT, HOST, () => {
+  console.log(`Server running at http://${HOST}:${PORT}/`);
 });
 
 
