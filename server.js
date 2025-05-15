@@ -26,7 +26,7 @@ app.options('*', cors(corsOptions));
 app.get('/', (req, res) => {
   res.send('Hello, Node.js!');
 });
-const port = process.env.port=3306 || 5000;
+const port = process.env.port || 5000;
 const host = '0.0.0.0'; // добавь эту строку
 
 app.listen(port, host, () => {
